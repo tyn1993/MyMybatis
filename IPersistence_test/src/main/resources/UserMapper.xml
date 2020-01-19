@@ -1,0 +1,13 @@
+<mapper namespace="IUserDao">
+
+
+    <!--sql的唯一标识：namespace。id来组成 ：statementId-->
+    <select id ="findAll" resultType="com.tyn.pojo.User">
+        select * from user
+    </select>
+
+    <select id ="findUser" resultType="com.tyn.pojo.User" paramterTypee="com.tyn.pojo.User">
+        select * from user where id =#{id} and username = #{username}
+    </select>
+
+</mapper>
